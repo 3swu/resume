@@ -9,7 +9,7 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: template/resume/resume.tex
+          root_file: template/resume.tex
       - name: Uploading artifact
         uses: actions/upload-artifact@v2
         with:
