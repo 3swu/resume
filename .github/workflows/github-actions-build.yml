@@ -20,12 +20,12 @@ jobs:
         uses: nanzm/get-time-action@v1.1
         with:
           timeZone: +8
-          format: 'YYYY-MM-DD-HH-mm-ss'
+          format: 'YY.MM.DD'
       - name: Create Release
         id: create_release
         uses: softprops/action-gh-release@v1
         with:
-          name: Resume compiled on ${{ steps.time.outputs.time }}
+          name: v${{ steps.time.outputs.time }}
           tag_name: ${{ steps.time.outputs.time }}
       - name: Upload Release Asset
         id: upload-release-asset
